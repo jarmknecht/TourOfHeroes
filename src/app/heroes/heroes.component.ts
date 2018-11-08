@@ -7,22 +7,25 @@ styleUrls— the location of the component's private CSS styles. */
 
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero'; //imports hero.ts
+import { HEROES } from '../mock-heroes';
 
 @Component({
   selector: 'app-heroes', //matches the name of the HTML element that ids this component win a parent component
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
-export class HeroesComponent implements OnInit { //always export class so you can use in other places
-  
-  hero: Hero = { //hero is now an object
-  	id: 1,
-  	name: 'Windstorm'
-  };
-
+export class HeroesComponent implements OnInit { //always export class so you can use in other place
+  heroes = HEROES;
+  selectedHero: Hero;
+ 
   constructor() { }
 
   ngOnInit() { //lifecycle hook called when creating a component place to put initialization logic
   }
+
+   onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+
 
 }
