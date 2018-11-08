@@ -1,0 +1,7 @@
+<h2>{{hero.name | uppercase}} Details</h2> <!--makes heros name in all caps-->
+<div><span>id: </span>{{hero.id}}</div>
+<div>
+    <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"> <!--ngModel is angular's two-way dat binding syntax-->
+    </label>
+</div>
