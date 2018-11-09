@@ -10,7 +10,7 @@ import { HeroesComponent } from './heroes/heroes.component';
     HeroesComponent
   ],
   imports: [ //holds the list of external modules the app needs
-    BrowserModule
+    BrowserModule,
     FormsModule
   ],
   providers: [],
