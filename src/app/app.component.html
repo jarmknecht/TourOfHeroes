@@ -1,5 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>{{title}}</h1> <!--You used the double curly braces of interpolation to display the app title.-->
-<app-heroes></app-heroes> <!--adds the hero html to the over all app html-->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet> <!--adds the hero html to the over all app html-->
 <app-messages></app-messages>
 
